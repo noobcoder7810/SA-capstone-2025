@@ -22,23 +22,8 @@ Mermaid: For architecture diagramming
 
 🛠️ Architecture Diagram (Model 1 & Model 2)
 
-graph TD
-    A[Raw Dataset (.csv)] --> B[Preprocessing: Timestamp Parsing]
-    B --> C[Pathway Streaming Engine]
-    C --> D[Model 1: Daily Tumbling Window]
-    D --> E1[Occupancy Min/Max]
-    E1 --> F1[Base Price + (OccMax - OccMin)/Capacity]
-    F1 --> G1[Daily Price Output]
-    
-    C --> D2[Model 2: Daily Tumbling Window]
-    D2 --> E2[Avg Occupancy, Queue, Traffic, Vehicle, Special Day]
-    E2 --> F2[Demand Score Calculation]
-    F2 --> G2[Clipped Demand 0 - 2.5]
-    G2 --> H2[Price = 10 + 0.2 * Demand]
-    H2 --> I2[Daily Price Output]
-    
-    G1 --> V1[Plot: Price per Lot - Model 1]
-    I2 --> V2[Plot: Price per Lot - Model 2]
+![Untitled diagram _ Mermaid Chart-2025-07-09-181525](https://github.com/user-attachments/assets/e633c833-2369-454d-95bd-8683f3359034)
+
 
 📚 Project Architecture & Workflow
 
